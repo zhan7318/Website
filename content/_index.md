@@ -1,6 +1,14 @@
 +++
-title = "Greetings"
-template = "index.html"
+title = "Greetings" 
+template = "index.html" 
 +++
 
-# Hi world!
+- Item One
+- Item Two
+- Item Three
+
+<https://acm.umn.edu>
+
+[ACM UMN](https://acm.umn.edu)
+
+![Joker cat is cool](images/jokercat.jpg)
