@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: zhan7318.github.io/Website/sitemap.xml
