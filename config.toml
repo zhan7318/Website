@@ -8,7 +8,8 @@ description = ""
 compile_sass = true
 
 [extra]
-author = "ACM UMN"
+author = "raymond"
 menu = [
     { url = "/", name = "Home" },
+    { url = "https://bigrat.monster", name = "Bigrat" }
 ]
