@@ -19,6 +19,7 @@ body {
 
 img {
     width: 5em;
+    @include spin();
 }
 
 footer {
