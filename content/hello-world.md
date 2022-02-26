@@ -4,8 +4,8 @@ template = "index.html"
 +++
 
 - Item One
-- Item TWo
--Item Three
+- Item Two
+- Item Three
 
 <https://acm.umn.edu>
 
