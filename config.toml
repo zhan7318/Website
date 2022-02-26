@@ -1,0 +1,14 @@
+# Change this value to your own domain.
+base_url = "on.acm.horse"
+
+title = ""
+description = ""
+
+# minify_html = true
+compile_sass = true
+
+[extra]
+author = "ACM UMN"
+menu = [
+    { url = "/", name = "Home" },
+]

@@ -1,0 +1,28 @@
+name: "Deploy"
+on:
+  push:
+    branches:
+      - main
+jobs:
+  site:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: nixbuild/nix-quick-install-action@v5
+        with:
+          nix_version: 2.4pre20201205_a5d85d0
+          nix_conf: experimental-features = nix-command flakes
+      - name: nix build
+        run: nix build -L .#site
+      - name: deploy site
+        run: |
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git checkout -b deploy
+          cp -r result/ docs/
+          chmod -R u+w docs/
+          touch {,docs/}.nojekyll
+          cp CNAME docs/ || true
+          git add .nojekyll docs/
+          git commit -m "public: deploy site"
+          git push --force origin deploy
